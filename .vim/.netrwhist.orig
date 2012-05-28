@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/awagner/Downloads/.vim'
+let g:netrw_dirhist_2='/home/awagner/.vim'
+let g:netrw_dirhist_3='/home/awagner/Downloads/.vim'
+let g:netrw_dirhist_4='/home/awagner/.vim/colors'
+let g:netrw_dirhist_5='/home/awagner/.vim'
+let g:netrw_dirhist_6='/home/awagner/.vim/colors'
+let g:netrw_dirhist_7='/home/awagner/Projects/remoteresult/remoteresult'
+let g:netrw_dirhist_8='/home/awagner/Projects/phoenix-cr/html/min/lib'
