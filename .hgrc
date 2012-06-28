@@ -1,5 +1,5 @@
 [ui]
-username = Chuck Gabriel <chuck.gabriel@learningstation.com>
+username = Chuck Gabriel <charles.gabriel@benefitfocus.com>
 merge = vimdiff
 
 [merge-tools]
@@ -7,12 +7,5 @@ vimdiff.executable = vim
 vimdiff.args = -d $local $other
 
 [extensions]
-kilnauth =/home/chuck/.hgext/kilnauth
-kilnpath = /home/chuck/.hgext/kilnpath
-color = 
-pager = 
-
-[kiln_scheme]
-kiln = https://learningstation.kilnhg.com/Repo/Repositories
-phx = https://learningstation.kilnhg.com/Repo/Repositories/phoenix
+mq=
 
