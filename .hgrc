@@ -7,5 +7,10 @@ vimdiff.executable = vim
 vimdiff.args = -d $local $other
 
 [extensions]
+color=
 mq=
+
+[auth]
+beast.prefix = http://beast
+beast.username = cgabriel
 

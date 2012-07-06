@@ -6,3 +6,6 @@ export WORKON_HOME=~/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
 export HISTCONTROL=ignoredups
+
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+

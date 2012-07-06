@@ -49,5 +49,5 @@ nnoremap <Leader>u :diffupdate<cr>
 nnoremap <Leader>g :diffget<cr>
 nnoremap <Leader>p :diffput<cr>
 
-hi LongLines cterm=bold ctermbg=red
-au BufRead,BufNewFile *.py,*.php*,.sh call matchadd('LongLines','\%>80v.\+')
+" au FileType python hi LongLines cterm=bold ctermbg=red
+" au BufRead,BufNewFile *.py,*.php*,.sh call matchadd('LongLines','\%>80v.\+')
