@@ -38,16 +38,8 @@ filetype on         " Enable filetype detection
 filetype indent on  " Enable filetype-specific indenting
 filetype plugin on  " Enable filetype-specific plugins
 
-" Load language specific stuff
-au BufRead,BufNewFile *templates/*.html set ft=smarty
-au BufRead,BufNewFile *.php source ~/.vim/php.vimrc
-au BufRead,BufNewFile *.html source ~/.vim/php.vimrc
-
-
 " Diff tools
 nnoremap <Leader>u :diffupdate<cr>
 nnoremap <Leader>g :diffget<cr>
 nnoremap <Leader>p :diffput<cr>
 
-" au FileType python hi LongLines cterm=bold ctermbg=red
-" au BufRead,BufNewFile *.py,*.php*,.sh call matchadd('LongLines','\%>80v.\+')
