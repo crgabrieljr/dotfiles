@@ -43,3 +43,6 @@ nnoremap <Leader>u :diffupdate<cr>
 nnoremap <Leader>g :diffget<cr>
 nnoremap <Leader>p :diffput<cr>
 
+" Pathogen
+call pathogen#infect()
+
