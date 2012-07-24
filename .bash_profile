@@ -7,5 +7,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 export HISTCONTROL=ignoredups
 
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/Library/Haskell/bin:/Users/cgabriel/play-2.0.2:$PATH"
 
