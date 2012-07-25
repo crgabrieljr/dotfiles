@@ -9,3 +9,7 @@ export HISTCONTROL=ignoredups
 
 export PATH="$HOME/Library/Haskell/bin:/Users/cgabriel/play-2.0.2:$PATH"
 
+export ECLIPSE_HOME="/Applications/eclipse"
+
+export TERM=xterm-256color
+

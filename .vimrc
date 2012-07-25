@@ -46,3 +46,5 @@ nnoremap <Leader>p :diffput<cr>
 " Pathogen
 call pathogen#infect()
 
+colorscheme lettuce
+
