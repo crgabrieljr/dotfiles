@@ -1,4 +1,5 @@
 # command aliases
+alias la="ls -aG"
 alias ls="ls -G"
 alias ll="ls -laG"
 
@@ -25,7 +26,7 @@ export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.28/libexec
 
 export ECLIPSE_HOME=/Applications/eclipse
 
-export MW_HOME=$HOME/wls1033_dev
+export MW_HOME=/Applications/Weblogic
 export WL_HOME=$MW_HOME/wlserver
 export DOMAIN_HOME=$HOME/Projects/trunk/4X/deploy/EnrollmentDomain
 
