@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/chuck/working/lsservice/lsservice'
 let g:netrw_dirhist_2='/home/chuck/working/bigdata/bigdata'
 let g:netrw_dirhist_3='/home/chuck/working/lsservice/lsservice'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/chuck/working/lsexport/lsexport'
 let g:netrw_dirhist_5='/home/chuck/working/lsservice/lsservice'
 let g:netrw_dirhist_6='/home/chuck/working/bigdata/bigdata'
 let g:netrw_dirhist_7='/Users/cgabriel'
+let g:netrw_dirhist_8='/Users/cgabriel/Projects/Tools/lemmy_junit'

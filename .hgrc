@@ -7,7 +7,7 @@ vimdiff.executable = vim
 vimdiff.args = -d $local $other
 
 [extensions]
-reviewboard=/Users/cgabriel/reviewboard
+#reviewboard=/Users/cgabriel/reviewboard
 color=
 mq=
 
@@ -15,7 +15,7 @@ mq=
 beast.prefix = http://beast
 beast.username = cgabriel
 
-[reviewboard]
-server=http://beast:8087/reviewboard/
-user=cgabriel
+#[reviewboard]
+#server=http://beast:8087/reviewboard/
+#user=cgabriel
 

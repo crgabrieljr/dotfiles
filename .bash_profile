@@ -18,7 +18,7 @@ export M2_HOME=/usr/share/maven
 export M2=$M2_HOME/bin
 export MAVEN_OPTS=$JAVA_OPTIONS
 
-export PATH=$HOME/Library/Haskell/bin:/Users/cgabriel/play-2.0.2:$M2:$PATH
+export PATH=/opt/subversion/bin:$M2:$PATH
 
 export TRUNK_HOME=$HOME/Projects/trunk
 
