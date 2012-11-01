@@ -3,6 +3,13 @@ alias la="ls -aG"
 alias ls="ls -G"
 alias ll="ls -laG"
 
+alias home="cd ~"
+alias proj="cd ~/Projects"
+alias tools="cd ~/Projects/Tools"
+
+alias profile="vim ~/.bash_profile"
+alias rs=". ~/.bash_profile"
+
 # virtualenvwrapper settings
 export WORKON_HOME=~/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
@@ -32,3 +39,18 @@ export DOMAIN_HOME=$HOME/Projects/trunk/4X/deploy/EnrollmentDomain
 
 export TERM=xterm-256color
 
+function connect() {
+    cd ~/Projects/Tools/rduConnect
+    case $1 in
+        lemmy)
+            host=lemmyboard201
+            ;;
+        mongo)
+            host=coremongo201
+            ;;
+        *)
+            host=$1
+            ;;
+    esac
+    ssh -i RDU-keypair root@$host.prod1.benefitfocus.com
+}
