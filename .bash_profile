@@ -22,6 +22,8 @@ alias beast="ssh root@beast"
 alias profile="vim ~/.bash_profile"
 alias rs=". ~/.bash_profile"
 
+alias pylint="pylint -fcolorized -rn $1"
+
 # virtualenvwrapper settings
 export WORKON_HOME=~/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
