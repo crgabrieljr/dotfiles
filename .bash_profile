@@ -6,7 +6,11 @@ alias ll="ls -laG"
 alias home="cd ~"
 alias df="cd ~/dotfiles"
 
-alias proj="cd ~/Projects"
+alias pj="cd ~/Projects"
+
+alias es="cd ~/Projects/trunk/enterpriseServices"
+alias ee="cd ~/Projects/trunk/4X"
+alias pl="cd ~/Projects/trunk/4X/webservices/platformservices"
 
 alias gs="cd ~/Projects/GroupShopping/trunk"
 alias gss="cd ~/Projects/GroupShopping/trunk/groupshop_services"
@@ -19,7 +23,7 @@ alias so="cd ~/Projects/Automation/trunk/GroupShopping/SoapUI"
 
 alias beast="ssh root@beast"
 
-alias profile="vim ~/.bash_profile"
+alias pf="vim ~/.bash_profile"
 alias rs=". ~/.bash_profile"
 
 alias pylint="pylint -fcolorized -rn $1"
