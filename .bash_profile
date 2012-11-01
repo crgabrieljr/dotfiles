@@ -4,8 +4,20 @@ alias ls="ls -G"
 alias ll="ls -laG"
 
 alias home="cd ~"
+alias df="cd ~/dotfiles"
+
 alias proj="cd ~/Projects"
+
+alias gs="cd ~/Projects/GroupShopping/trunk"
+alias gss="cd ~/Projects/GroupShopping/trunk/groupshop_services"
+
 alias tools="cd ~/Projects/Tools"
+alias lj="cd ~/Projects/Tools/lemmy_junit/lemmy_junit"
+
+alias se="cd ~/Projects/Automation/trunk/GroupShopping/Selenium"
+alias so="cd ~/Projects/Automation/trunk/GroupShopping/SoapUI"
+
+alias beast="ssh root@beast"
 
 alias profile="vim ~/.bash_profile"
 alias rs=". ~/.bash_profile"
