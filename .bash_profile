@@ -12,14 +12,15 @@ alias es="cd ~/Projects/trunk/enterpriseServices"
 alias ee="cd ~/Projects/trunk/4X"
 alias pl="cd ~/Projects/trunk/4X/webservices/platformservices"
 
-alias gs="cd ~/Projects/GroupShopping/trunk"
-alias gss="cd ~/Projects/GroupShopping/trunk/groupshop_services"
+alias gs="cd ~/Projects/GroupShopping"
+alias gss="cd ~/Projects/GroupShopping/groupshop_services"
 
 alias tools="cd ~/Projects/Tools"
+alias lb="cd ~/Projects/Tools/lemmyboard"
 alias lj="cd ~/Projects/Tools/lemmy_junit/lemmy_junit"
 
-alias se="cd ~/Projects/Automation/trunk/GroupShopping/Selenium"
-alias so="cd ~/Projects/Automation/trunk/GroupShopping/SoapUI"
+alias se="cd ~/Projects/Automation/Selenium"
+alias so="cd ~/Projects/Automation/SoapUI"
 
 alias beast="ssh root@beast"
 
@@ -27,6 +28,8 @@ alias pf="vim ~/.bash_profile"
 alias rs=". ~/.bash_profile"
 
 alias pylint="pylint -fcolorized -rn $1"
+
+alias st="git status"
 
 # virtualenvwrapper settings
 export WORKON_HOME=~/virtualenv
@@ -58,17 +61,20 @@ export DOMAIN_HOME=$HOME/Projects/trunk/4X/deploy/EnrollmentDomain
 export TERM=xterm-256color
 
 function connect() {
-    cd ~/Projects/Tools/rduConnect
-    case $1 in
-        lemmy)
-            host=lemmyboard201
-            ;;
-        mongo)
-            host=coremongo201
-            ;;
-        *)
-            host=$1
-            ;;
-    esac
-    ssh -i RDU-keypair root@$host.prod1.benefitfocus.com
+    if [ "$1" != "" ]; then
+        cd ~/Projects/Tools/rduConnect
+        case $1 in
+            lemmy)
+                host=lemmyboard201
+                ;;
+            mongo)
+                host=coremongo201
+                ;;
+            *)
+                host=$1
+                ;;
+        esac
+        ssh -i RDU-keypair root@$host.prod1.benefitfocus.com
+    fi
 }
+
