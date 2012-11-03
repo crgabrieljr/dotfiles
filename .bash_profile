@@ -10,6 +10,7 @@ alias pj="cd ~/Projects"
 
 alias es="cd ~/Projects/trunk/enterpriseServices"
 alias ee="cd ~/Projects/trunk/4X"
+alias ed="cd ~/Projects/trunk/4X/deploy/EnrollmentDomain"
 alias pl="cd ~/Projects/trunk/4X/webservices/platformservices"
 
 alias gs="cd ~/Projects/GroupShopping"
