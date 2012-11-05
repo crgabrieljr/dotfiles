@@ -79,3 +79,12 @@ function connect() {
     fi
 }
 
+function setdb() {
+    $TRUNK_HOME/4X/deploy/scripts/change-domain-jdbc-urls.sh $*
+}
+
+function pskill() {
+    if [ "$1" != "" ]; then
+        ps aux | grep $1 | grep -v grep | awk '{ print $2 }' | xargs kill -sigterm
+    fi
+}
