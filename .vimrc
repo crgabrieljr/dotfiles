@@ -38,6 +38,11 @@ filetype on         " Enable filetype detection
 filetype indent on  " Enable filetype-specific indenting
 filetype plugin on  " Enable filetype-specific plugins
 
+" Mouse
+noremap <MiddleMouse> <Nop>
+noremap <2-MiddleMouse> <Nop>
+noremap <3-MiddleMouse> <Nop>
+
 " Diff tools
 nnoremap <Leader>u :diffupdate<cr>
 nnoremap <Leader>g :diffget<cr>
