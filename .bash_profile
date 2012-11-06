@@ -59,6 +59,10 @@ export MW_HOME=/Applications/Weblogic
 export WL_HOME=$MW_HOME/wlserver
 export DOMAIN_HOME=$HOME/Projects/trunk/4X/deploy/EnrollmentDomain
 
+export BF_EESHDEV=http://eeshdev
+export BF_LOCAL=http://localhost:7001
+export SECURITY_OID=2535954602
+
 export TERM=xterm-256color
 
 function connect() {
@@ -87,4 +91,25 @@ function pskill() {
     if [ "$1" != "" ]; then
         ps aux | grep $1 | grep -v grep | awk '{ print $2 }' | xargs kill -sigterm
     fi
+}
+
+function gsmongo() {
+    mongod --fork --dbpath $HOME/mongodb/groupshopping/data --logpath $HOME/mongodb/groupshopping/logs --logappend
+}
+
+function getBFHost() {
+    case $1 in
+        local)
+            host=$BF_LOCAL
+            ;;
+        *)
+            host=$BF_EESHDEV
+            ;;
+    esac
+    echo $host
+}
+
+function getToken() {
+    host=$(getBFHost $1)
+    echo $(curl $host/enterprise/rest/bftoken/encrypt?securityOid=$SECURITY_OID | head -n3 | tail -n1 | cut -d'>' -f3 | cut -d'<' -f1)
 }
