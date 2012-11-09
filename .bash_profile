@@ -15,6 +15,7 @@ alias pl="cd ~/Projects/trunk/4X/webservices/platformservices"
 
 alias gs="cd ~/Projects/GroupShopping"
 alias gss="cd ~/Projects/GroupShopping/groupshop_services"
+alias ui="cd ~/Projects/GroupShopping/groupshop_ui"
 
 alias tools="cd ~/Projects/Tools"
 alias lb="cd ~/Projects/Tools/lemmyboard"
@@ -31,6 +32,7 @@ alias rs=". ~/.bash_profile"
 alias pylint="pylint -fcolorized -rn $1"
 
 alias st="git status"
+alias gd="git diff"
 
 # virtualenvwrapper settings
 export WORKON_HOME=~/virtualenv
@@ -47,7 +49,7 @@ export M2_HOME=/usr/share/maven
 export M2=$M2_HOME/bin
 export MAVEN_OPTS=$JAVA_OPTIONS
 
-export PATH=/opt/subversion/bin:/usr/local/bin:/usr/bin:$M2:$PATH
+export PATH=/usr/local/share/npm/bin:/opt/subversion/bin:/usr/local/bin:/usr/bin:$M2:$PATH
 
 export TRUNK_HOME=$HOME/Projects/trunk
 
@@ -64,6 +66,8 @@ export BF_LOCAL=http://localhost:7001
 export SECURITY_OID=2535954602
 
 export TERM=xterm-256color
+
+export SVN_EDITOR=vim
 
 function connect() {
     if [ "$1" != "" ]; then
