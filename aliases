@@ -1,0 +1,35 @@
+alias la="ls -aG"
+alias ls="ls -G"
+alias ll="ls -laG"
+
+alias home="cd ~"
+alias df="cd ~/dotfiles"
+
+alias pj="cd ~/Projects"
+
+alias es="cd ~/Projects/trunk/enterpriseServices"
+alias ee="cd ~/Projects/trunk/4X"
+alias ed="cd ~/Projects/trunk/4X/deploy/EnrollmentDomain"
+alias pl="cd ~/Projects/trunk/4X/webservices/platformservices"
+
+alias gs="cd ~/Projects/GroupShopping/trunk"
+alias gss="cd ~/Projects/GroupShopping/trunk/groupshop_services"
+alias ui="cd ~/Projects/GroupShopping/trunk/groupshop_ui"
+
+alias tools="cd ~/Projects/Tools"
+alias lb="cd ~/Projects/Tools/lemmyboard"
+alias lj="cd ~/Projects/Tools/lemmy_junit/lemmy_junit"
+
+alias se="cd ~/Projects/Automation/Selenium"
+alias so="cd ~/Projects/Automation/SoapUI"
+
+alias beast="ssh root@beast"
+
+alias pf="vim ~/.bash_profile"
+alias rs=". ~/.bash_profile"
+
+alias pylint="pylint -fcolorized -rn $1"
+
+alias st="git status"
+alias gd="git diff"
+
