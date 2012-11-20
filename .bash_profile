@@ -13,9 +13,9 @@ alias ee="cd ~/Projects/trunk/4X"
 alias ed="cd ~/Projects/trunk/4X/deploy/EnrollmentDomain"
 alias pl="cd ~/Projects/trunk/4X/webservices/platformservices"
 
-alias gs="cd ~/Projects/GroupShopping"
-alias gss="cd ~/Projects/GroupShopping/groupshop_services"
-alias ui="cd ~/Projects/GroupShopping/groupshop_ui"
+alias gs="cd ~/Projects/GroupShopping/trunk"
+alias gss="cd ~/Projects/GroupShopping/trunk/groupshop_services"
+alias ui="cd ~/Projects/GroupShopping/trunk/groupshop_ui"
 
 alias tools="cd ~/Projects/Tools"
 alias lb="cd ~/Projects/Tools/lemmyboard"
@@ -104,7 +104,12 @@ function pskill() {
 }
 
 function gsmongo() {
-    mongod --fork --dbpath $HOME/mongodb/groupshopping/data --logpath $HOME/mongodb/groupshopping/logs --logappend
+    proc=$(psfind mongo)
+    if [ "$proc" == "" ]; then
+        mongod --fork --dbpath $HOME/mongodb/groupshopping/data --logpath $HOME/mongodb/groupshopping/logs --logappend
+    else
+        mongo groupshopping
+    fi
 }
 
 function getBFHost() {
