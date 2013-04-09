@@ -54,7 +54,15 @@ function getBFHost() {
 }
 
 function getToken() {
-    host=$(getBFHost $1)
-    echo $(curl $host/enterprise/rest/bftoken/encrypt?securityOid=$SECURITY_OID | head -n3 | tail -n1 | cut -d'>' -f3 | cut -d'<' -f1)
+    echo $(curl http://localhost/mask/token)
 }
 
+function cearl() {
+    TOKEN=$(curl http://beast/mask/token)
+    curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' $*
+}
+
+function kurl() {
+    TOKEN=$(curl http://localhost/mask/token)
+    curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' $*
+}

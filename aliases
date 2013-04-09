@@ -10,11 +10,18 @@ alias pj="cd ~/Projects"
 alias es="cd ~/Projects/trunk/enterpriseServices"
 alias ee="cd ~/Projects/trunk/4X"
 alias ed="cd ~/Projects/trunk/4X/deploy/EnrollmentDomain"
-alias pl="cd ~/Projects/trunk/4X/webservices/platformservices"
+alias pl="cd ~/Projects/trunk/4X/webservices/platformservices/platformservices-web"
 
 alias gs="cd ~/Projects/GroupShopping/trunk"
+alias gst="cd ~/Projects/GroupShopping/trunk/tools"
 alias gss="cd ~/Projects/GroupShopping/trunk/groupshop_services"
+alias gsst="cd ~/Projects/GroupShopping/trunk/groupshop_services/tests_integration"
 alias ui="cd ~/Projects/GroupShopping/trunk/groupshop_ui"
+alias ad="cd ~/Projects/GroupShopping/trunk/groupshop_admin"
+alias ma="cd ~/Projects/GroupShopping/trunk/masquerade"
+
+alias mako="cd ~/Projects/mako"
+alias mkgs="cd ~/Projects/mako/templates/apps/group-shopping"
 
 alias tools="cd ~/Projects/Tools"
 alias lb="cd ~/Projects/Tools/lemmyboard"
@@ -25,11 +32,17 @@ alias so="cd ~/Projects/Automation/SoapUI"
 
 alias beast="ssh root@beast"
 
-alias pf="vim ~/.bash_profile"
+alias pf="vim ~/.aliases ~/.exports ~/.functions"
+alias al="vim ~/.aliases"
+alias ex="vim ~/.exports"
+alias fn="vim ~/.functions"
 alias rs=". ~/.bash_profile"
 
 alias pylint="pylint -fcolorized -rn $1"
 
 alias st="git status"
 alias gd="git diff"
+
+alias logs="cd /usr/local/apache-tomcat/logs"
+alias ap="cd /usr/local/apache-tomcat"
 

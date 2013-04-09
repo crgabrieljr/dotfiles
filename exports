@@ -13,11 +13,11 @@ export M2_HOME=/usr/share/maven
 export M2=$M2_HOME/bin
 export MAVEN_OPTS=$JAVA_OPTIONS
 
-export PATH=/usr/local/share/npm/bin:/opt/subversion/bin:/usr/local/bin:/usr/bin:$M2:$PATH
-
 export TRUNK_HOME=$HOME/Projects/trunk
 
-export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.28/libexec
+export CATALINA_HOME=/usr/local/apache-tomcat
+export JPDA_ADDRESS=8009
+export JPDA_TRANSPORT=dt_socket
 
 export ECLIPSE_HOME=/Applications/eclipse
 
@@ -32,4 +32,11 @@ export SECURITY_OID=2535954602
 export TERM=xterm-256color
 
 export SVN_EDITOR=vim
+
+export PATH=$CATALINA_HOME/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/subversion/bin:/usr/local/bin:/usr/bin:$M2:$PATH
+
+#export ORACLE_HOME=/usr/local/lib/instantclient_10_2
+#export LD_LIBRARY_PATH=$ORACLE_HOME
+#export DYLD_LIBRARY_PATH=$ORACLE_HOME
+#export VERSIONER_PYTHON_PREFER_32_BIT=yes
 
