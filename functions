@@ -57,12 +57,12 @@ function getToken() {
     echo $(curl http://localhost/mask/token)
 }
 
-function cearl() {
-    TOKEN=$(curl http://beast/mask/token)
-    curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' $*
-}
-
 function kurl() {
     TOKEN=$(curl http://localhost/mask/token)
     curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' $*
 }
+
+function build() {
+    mvn clean install -Dmaven.test.skip=true
+}
+
