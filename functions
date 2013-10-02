@@ -28,7 +28,7 @@ function psfind() {
 
 function pskill() {
     if [ "$1" != "" ]; then
-        ps aux | grep $1 | grep -v grep | awk '{ print $2 }' | xargs kill -sigterm
+        ps aux | grep $1 | grep -v grep | awk '{ print $2 }' | xargs kill -9
     fi
 }
 
@@ -37,7 +37,7 @@ function gsmongo() {
     if [ "$proc" == "" ]; then
         mongod --fork --dbpath $HOME/mongodb/groupshopping/data --logpath $HOME/mongodb/groupshopping/logs --logappend
     else
-        mongo groupshopping
+        mongo groupshopping $*
     fi
 }
 
@@ -58,11 +58,23 @@ function getToken() {
 }
 
 function kurl() {
-    TOKEN=$(curl http://localhost/mask/token)
-    curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' $*
+    TOKEN=$(curl http://beast/mask/token)
+    echo $TOKEN
+    curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' -H'Accept: application/json' $*
 }
 
 function build() {
-    mvn clean install -Dmaven.test.skip=true
+    mvn install -Dmaven.test.skip=true $*
+}
+
+function rebuild() {
+    mvn clean install -Dmaven.test.skip=true $*
+}
+
+function jslint() {
+    for file in $*
+    do
+        jsl -process $file
+    done
 }
 

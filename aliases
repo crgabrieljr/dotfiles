@@ -8,9 +8,11 @@ alias df="cd ~/dotfiles"
 alias pj="cd ~/Projects"
 
 alias es="cd ~/Projects/trunk/enterpriseServices"
+alias bfapi="cd ~/Projects/trunk/enterpriseServices/schemas/benefitfocus-api"
+
 alias ee="cd ~/Projects/trunk/4X"
 alias ed="cd ~/Projects/trunk/4X/deploy/EnrollmentDomain"
-alias cbm="cd ~/Projects/trunk/4X/cbm"
+alias cbm="cd ~/Projects/trunk/4X/cbm/bf-enrollment-cbm"
 alias pl="cd ~/Projects/trunk/4X/webservices/platformservices/platformservices-web"
 
 alias gs="cd ~/Projects/GroupShopping/trunk"
@@ -22,6 +24,7 @@ alias gsst="cd ~/Projects/GroupShopping/trunk/groupshop_services/tests_integrati
 alias ui="cd ~/Projects/GroupShopping/trunk/groupshop_ui"
 alias ad="cd ~/Projects/GroupShopping/trunk/groupshop_admin"
 alias ma="cd ~/Projects/GroupShopping/trunk/masquerade"
+alias branch="cd ~/Projects/GroupShopping/branches/2013.2.REL"
 
 alias mako="cd ~/Projects/mako"
 alias mkgs="cd ~/Projects/mako/templates/apps/group-shopping"
