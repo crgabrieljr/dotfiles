@@ -32,6 +32,10 @@ function pskill() {
     fi
 }
 
+function killDevServer() {
+    ps aux | grep resources.server | grep -v grep | awk '{ print $2 }' | xargs kill -TERM
+}
+
 function gsmongo() {
     proc=$(psfind mongo)
     if [ "$proc" == "" ]; then
@@ -59,8 +63,15 @@ function getToken() {
 
 function kurl() {
     TOKEN=$(curl http://beast/mask/token)
-    echo $TOKEN
+    #echo $TOKEN
     curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' -H'Accept: application/json' $*
+}
+
+function kurlp() {
+    TOKEN=$(curl http://beast/mask/token)
+    #echo $TOKEN
+    RESULT=$(curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' -H'Accept: application/json' $*)
+    echo $RESULT | python -m json.tool
 }
 
 function build() {

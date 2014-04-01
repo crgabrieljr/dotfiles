@@ -2,7 +2,6 @@ alias la="ls -aG"
 alias ls="ls -G"
 alias ll="ls -laG"
 
-alias home="cd ~"
 alias df="cd ~/dotfiles"
 
 alias pj="cd ~/Projects"
@@ -22,12 +21,16 @@ alias gsit="cd ~/Projects/GroupShopping/trunk/groupshop_services/tests_integrati
 alias eest="cd ~/Projects/GroupShopping/trunk/groupshop_services/tests_integration/tests_integration_enrollment"
 alias gsst="cd ~/Projects/GroupShopping/trunk/groupshop_services/tests_integration/tests_integration_groupshopping"
 alias ui="cd ~/Projects/GroupShopping/trunk/groupshop_ui"
-alias ad="cd ~/Projects/GroupShopping/trunk/groupshop_admin"
+alias wf="cd ~/Projects/GroupShopping/trunk/groupshop_ui/data"
 alias ma="cd ~/Projects/GroupShopping/trunk/masquerade"
 alias branch="cd ~/Projects/GroupShopping/branches/2013.2.REL"
 
 alias mako="cd ~/Projects/mako"
 alias mkgs="cd ~/Projects/mako/templates/apps/group-shopping"
+
+alias mdd="cd ~/Projects/mdd-engine"
+alias thr="cd ~/Projects/thresher"
+alias ham="cd ~/Projects/hammerhead"
 
 alias tools="cd ~/Projects/Tools"
 alias lb="cd ~/Projects/Tools/lemmyboard"
@@ -47,6 +50,8 @@ alias rs=". ~/.bash_profile"
 alias pylint="pylint -fcolorized -rn $1"
 
 alias st="git status"
+alias gb="git branch"
+alias gc="git checkout"
 alias gd="git diff"
 
 alias logs="cd /usr/local/apache-tomcat/logs"
