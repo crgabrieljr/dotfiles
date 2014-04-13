@@ -31,6 +31,7 @@ alias mkgs="cd ~/Projects/mako/templates/apps/group-shopping"
 alias mdd="cd ~/Projects/mdd-engine"
 alias thr="cd ~/Projects/thresher"
 alias ham="cd ~/Projects/hammerhead"
+alias gui="cd ~/Projects/gs-ui"
 
 alias tools="cd ~/Projects/Tools"
 alias lb="cd ~/Projects/Tools/lemmyboard"
