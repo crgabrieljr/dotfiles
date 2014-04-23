@@ -75,11 +75,11 @@ function kurlp() {
 }
 
 function build() {
-    mvn install -Dmaven.test.skip=true $*
+    mvn install -Dmaven.test.skip=true -DskipTests=true $*
 }
 
 function rebuild() {
-    mvn clean install -Dmaven.test.skip=true $*
+    mvn clean install -Dmaven.test.skip=true -DskipTests=true $*
 }
 
 function jslint() {
