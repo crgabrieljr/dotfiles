@@ -35,7 +35,7 @@ export TERM=xterm-256color
 
 export SVN_EDITOR=vim
 
-export PATH=$CATALINA_HOME/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/subversion/bin:/usr/local/bin:/usr/bin:$M2:$PATH
+export PATH=~/bin:$CATALINA_HOME/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/subversion/bin:/usr/local/bin:/usr/bin:$M2:$PATH
 
 #export ORACLE_HOME=/usr/local/lib/instantclient_10_2
 #export LD_LIBRARY_PATH=$ORACLE_HOME

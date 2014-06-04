@@ -38,6 +38,8 @@ filetype on         " Enable filetype detection
 filetype indent on  " Enable filetype-specific indenting
 filetype plugin on  " Enable filetype-specific plugins
 
+vmap u <Nop>
+
 " Mouse
 noremap <MiddleMouse> <Nop>
 noremap <2-MiddleMouse> <Nop>
