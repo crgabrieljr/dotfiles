@@ -45,24 +45,56 @@ function gsmongo() {
     fi
 }
 
-function getBFHost() {
-    case $1 in
-        local)
-            host=$BF_LOCAL
-            ;;
-        *)
-            host=$BF_EESHDEV
-            ;;
-    esac
-    echo $host
-}
-
 function getToken() {
     echo $(curl http://localhost/mask/token)
 }
 
+function _getDirectoryCompletions() {
+    cd "$1"
+    subdirs=($(ls -d */))
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    if [ "$cur" == "" ]; then
+        COMPREPLY=$subdirs
+    else
+        COMPREPLY=()
+        for dir in "${subdirs[@]}"
+        do
+            if [[ "$dir" =~ ^"$cur" ]]; then
+                COMPREPLY+=($dir)
+            fi
+        done
+    fi
+    return 0
+}
+
+function _getMddBranches() {
+    _getDirectoryCompletions ~/Projects/mdd-service/projects/mdd-engine
+}
+
+function mdd() {
+    if [ "$1" == "" ]; then
+        cd ~/Projects/mdd-service/projects/mdd-engine/develop
+    else
+        cd ~/Projects/mdd-service/projects/mdd-engine/"$1"
+    fi
+}
+complete -F _getMddBranches mdd
+
+function _getGsuiBranches() {
+    _getDirectoryCompletions ~/Projects/mdd-service/projects/gs-ui
+}
+
+function gui() {
+    if [ "$1" == "" ]; then
+        cd ~/Projects/mdd-service/projects/gs-ui/develop
+    else
+        cd ~/Projects/mdd-service/projects/gs-ui/"$1"
+    fi
+}
+complete -F _getGsuiBranches gui
+
 function kurl() {
-    TOKEN=$(curl http://beast/mask/token)
+    TOKEN=$(curl http://beast:8080/mask/token)
     #echo $TOKEN
     curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' -H'Accept: application/json' $*
 }
