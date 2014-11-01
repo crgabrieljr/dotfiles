@@ -11,7 +11,7 @@ alias bfapi="cd ~/Projects/trunk/enterpriseServices/schemas/benefitfocus-api"
 
 alias ee="cd ~/Projects/trunk/4X"
 alias ed="cd ~/Projects/trunk/4X/deploy/EnrollmentDomain"
-alias cbm="cd ~/Projects/trunk/4X/cbm/bf-enrollment-cbm"
+alias cbm="cd ~/Projects/trunk/4X/cbm"
 alias pl="cd ~/Projects/trunk/4X/webservices/platformservices/platformservices-web"
 
 alias gs="cd ~/Projects/GroupShopping/trunk"
@@ -28,10 +28,8 @@ alias branch="cd ~/Projects/GroupShopping/branches/2013.2.REL"
 alias mako="cd ~/Projects/mako"
 alias mkgs="cd ~/Projects/mako/templates/apps/group-shopping"
 
-alias mdd="cd ~/Projects/mdd-engine"
-alias thr="cd ~/Projects/thresher"
+alias mds="cd ~/Projects/mdd-service"
 alias ham="cd ~/Projects/hammerhead"
-alias gui="cd ~/Projects/gs-ui"
 
 alias tools="cd ~/Projects/Tools"
 alias lb="cd ~/Projects/Tools/lemmyboard"
