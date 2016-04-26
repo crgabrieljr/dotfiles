@@ -1,5 +1,17 @@
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
 set show-all-if-ambiguous on
 set completion-ignore-case on
 set bell-style None
+
+#set expand-tilde on
+#set convert-meta off
+#set input-meta on
+#set output-meta on
+#set visible-stats on
+#set -o vi

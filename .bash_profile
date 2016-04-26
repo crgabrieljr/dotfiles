@@ -1,3 +1,8 @@
+#!/bin/bash
+export TNS_ADMIN=/Users/cgabriel/Documents/instantclient/network/admin/
+export ORACLE_HOME=/Users/cgabriel/Documents/instantclient/
+export DYLD_LIBRARY_PATH=/Users/cgabriel/Documents/instantclient/
+
 # command aliases
 . ~/.aliases
 

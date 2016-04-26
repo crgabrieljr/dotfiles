@@ -32,11 +32,8 @@ function pskill() {
     fi
 }
 
-function killDevServer() {
-    ps aux | grep resources.server | grep -v grep | awk '{ print $2 }' | xargs kill -TERM
-}
-
 function gsmongo() {
+    ulimit -n 2048
     proc=$(psfind mongo)
     if [ "$proc" == "" ]; then
         mongod --fork --dbpath $HOME/mongodb/groupshopping/data --logpath $HOME/mongodb/groupshopping/logs --logappend
@@ -46,7 +43,7 @@ function gsmongo() {
 }
 
 function getToken() {
-    echo $(curl http://localhost/mask/token)
+    echo $(curl http://corpdevapp01.benefitfocus.com:8080/mask/token)
 }
 
 function _getDirectoryCompletions() {
@@ -93,14 +90,24 @@ function gui() {
 }
 complete -F _getGsuiBranches gui
 
+function _getConfigToolsBranches() {
+    _getDirectoryCompletions ~/Projects/mdd-service/projects/config-tools
+}
+
 function kurl() {
+    TOKEN=$(curl http://beast:8080/mask/token)
+    #echo $TOKEN
+    curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' $*
+}
+
+function kurlj() {
     TOKEN=$(curl http://beast:8080/mask/token)
     #echo $TOKEN
     curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' -H'Accept: application/json' $*
 }
 
 function kurlp() {
-    TOKEN=$(curl http://beast/mask/token)
+    TOKEN=$(curl http://beast:8080/mask/token)
     #echo $TOKEN
     RESULT=$(curl -H'BFToken:'$TOKEN -H'Content-Type: application/json' -H'Accept: application/json' $*)
     echo $RESULT | python -m json.tool
@@ -119,5 +126,9 @@ function jslint() {
     do
         jsl -process $file
     done
+}
+
+function dsh() {
+    docker exec -it $1 bash
 }
 
