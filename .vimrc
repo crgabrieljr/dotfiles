@@ -1,13 +1,13 @@
 " General Stuff
 set background=dark
-set expandtab
-set hlsearch
-set incsearch
+set expandtab " expand tabs to spaces
+set hlsearch " highlight search matches
+set incsearch " incremental search
 set laststatus=2
 set lazyredraw
 set listchars=eol:$,tab:>-,trail:.,extends:<,precedes:>
 set mouse=a
-set number
+set number " line numbers
 set ruler
 set rulerformat=%25(%n%m%r:\ %Y\ [%l,%v]\ %p%%%)
 set shiftwidth=4
@@ -45,7 +45,7 @@ noremap <MiddleMouse> <Nop>
 noremap <2-MiddleMouse> <Nop>
 noremap <3-MiddleMouse> <Nop>
 
-" Diff tools
+" Diff Tools
 nnoremap <Leader>u :diffupdate<cr>
 nnoremap <Leader>g :diffget<cr>
 nnoremap <Leader>p :diffput<cr>
